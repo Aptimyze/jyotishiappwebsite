@@ -82,6 +82,18 @@ body{
   padding-right: 5%;
 }
 
+.langNav {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-left: 10px;
+}
+
+.dropleft .dropdown-menu{
+  right: 0;
+  top: 120%;
+}
+
 /* ##################################### Home Section #####################################*/
 #home{
   padding: 2% 0 5% 0;
@@ -108,6 +120,11 @@ body{
   margin-top: 2rem;
 }
 
+.features-div p {
+  font-size: 1.15rem;
+  padding: 0 30px;
+}
+
 .icon {
   color: #ffa41b;
   margin-bottom: 1rem;
@@ -130,8 +147,7 @@ body{
 }
 
 .slashIcon {
-  transform: rotate(35deg);
-  padding-bottom: 5px;
+  transform: rotate(35deg) translate(-10px, -6px);
 }
 
 /* ###########################################About Us Section #########################################*/
@@ -335,6 +351,10 @@ a.social {
   .navbar-logo-img {
     width: 50px;
     height: 50px;
+  }
+
+  .langNav {
+    justify-content: flex-start;
   }
 
   .homeContainer h1 {
