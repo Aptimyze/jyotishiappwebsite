@@ -3,6 +3,42 @@ body{
   background-color: #ffa41b;
 }
 
+/* Scroll To Top Button */
+#scrollToTop {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #FF9800;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#scrollToTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#scrollToTop:active {
+  background-color: #555;
+}
+
+#scrollToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .sectionHeading{
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -46,6 +82,18 @@ body{
   padding-right: 5%;
 }
 
+.langNav {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-left: 10px;
+}
+
+.dropleft .dropdown-menu{
+  right: 0;
+  top: 120%;
+}
+
 /* ##################################### Home Section #####################################*/
 #home{
   padding: 2% 0 5% 0;
@@ -72,6 +120,11 @@ body{
   margin-top: 2rem;
 }
 
+.features-div p {
+  font-size: 1.15rem;
+  padding: 0 30px;
+}
+
 .icon {
   color: #ffa41b;
   margin-bottom: 1rem;
@@ -94,8 +147,7 @@ body{
 }
 
 .slashIcon {
-  transform: rotate(35deg);
-  padding-bottom: 5px;
+  transform: rotate(35deg) translate(-10px, -6px);
 }
 
 /* ###########################################About Us Section #########################################*/
@@ -159,12 +211,30 @@ body{
   background-color: #e89b3d;
 }
 
+/* ########################################About Jyotish Section ########################################*/
+#aboutJyotish {
+  padding: 4% 5%;
+  color: black;
+  text-align: center;
+  background-color: white;
+  background-image: url('images/black-thread-light.png');
+}
+
+#aboutJyotish p {
+  text-align: left;
+}
+
+.jyotishImgCol {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
 /* ###########################################Pricing Section ############################################*/
 #pricing {
   padding: 3% 10%;
   text-align: center;
-  background-color: white;
-  background-image: url('images/black-thread-light.png');
 }
 
 #pricing .container{
@@ -193,7 +263,7 @@ body{
 
 .card-header{
   border-radius: 20px 20px 0 0 !important;
-  background-color: #ffa41b;
+  background-color: #ffc368;
   border: none;
   color: snow;
 }
@@ -206,7 +276,8 @@ body{
 /* #################################################Testimonal Section #####################################*/
 #testimonials {
   text-align: center;
-  color: white;
+  background-color: white;
+  background-image: url('images/black-thread-light.png');
   padding: 4% 15%;
 }
 
@@ -216,33 +287,24 @@ h2 {
 
 .testimonial-img {
   width: 10%;
-  border-radius: 100%;
+  border-radius: 50%;
   margin: 20px;
-}
-
-.carousel-control-prev{
-  left: -5%;
-}
-
-.carousel-control-next{
-  right: -5%;
 }
 
 .carousel-indicators{
   bottom: -15%;
+  color: black;
 }
 
 /* ######################################Call To Action Section ############################################*/
 #cta{
   text-align: center;
-  background-color: white;
-  background-image: url('images/black-thread-light.png');
-  color: black;
+  color: white;
   padding: 4% 10%;
 }
 
 .download-btn-cta{
-  margin: 1% 3% 4% 0;
+  margin: 1% 3% 2% 0;
 }
 
 /* ###############################################Footer Section ############################################*/
@@ -266,4 +328,78 @@ a.social {
 
 .social:hover {
   transform: scale(1.4);
+}
+
+@media screen and (max-width: 450px) {
+  .navbar-nav{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .logoRow .logo-col{
+    padding: 0;
+  }
+
+  .logo-col {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    font-size: 2.2rem;
+  }
+
+  .navbar-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .langNav {
+    justify-content: flex-start;
+  }
+
+  .homeContainer h1 {
+    margin: 25px auto;
+  }
+
+  .download-button {
+    font-size: 0.9rem;
+    width: 44%;
+  }
+
+  #aboutUs, #aboutJyotish, #pricing, #testimonials {
+    padding: 10% 0;
+  }
+
+  #aboutUs p {
+    font-size: 0.9rem;
+  }
+
+  .sectionHeading {
+    margin-bottom: 1.5rem;
+  }
+
+  #pricing .row {
+    width: 100%;
+  }
+
+  .carousel-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-img {
+    width: 20%;
+    margin: 10px;
+  }
+
+  #cta {
+    padding: 10% 2%;
+  }
+
+  #cta h2 {
+    font-size: 1.3rem;
+  }
+
+  #footer {
+    padding: 5% 0;
+  }
 }
